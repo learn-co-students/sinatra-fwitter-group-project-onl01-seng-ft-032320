@@ -1,0 +1,20 @@
+<h2>Sign Up</h2>
+<form method="POST" action="/signup">
+<label>User Username: </label>
+<br> 
+<input type="text" name ="username"> 
+
+<br>
+<label>User Email: </label>
+<input type="text" name ="email"> 
+
+<br>
+<label>User Password: </label>
+<input type="password" name ="password"> 
+
+<button type="submit" id="submit">Submit</button>
+</form>
+<%= "Must include email and password" if @user && @user.errors.any? %>
+
+<br>
+<h2><a href="/login">Login</a></h2>
