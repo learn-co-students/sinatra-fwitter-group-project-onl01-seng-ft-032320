@@ -1,0 +1,8 @@
+<h1>Hi <%=@user.username%>!</h1>
+<h4>Pets:</h4>
+<ul>
+  <%@user.content.each do |pet|%>
+  <li><%=content.name%></li>
+  <%end%>
+</ul>
+<p><a href="/users/<%=@user.id%>%">Edit Tweet</a></p>
