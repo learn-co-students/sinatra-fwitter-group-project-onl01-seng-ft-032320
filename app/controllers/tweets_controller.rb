@@ -59,10 +59,6 @@ class TweetsController < ApplicationController
         redirect to "/tweets/#{@tweet.id}"
     end
 
-    get '/tweets/:slug' do
-        @tweet = tweet.find_by
-    end
-
     delete '/tweets/:id' do
         if !logged_in?
           redirect to '/login'
