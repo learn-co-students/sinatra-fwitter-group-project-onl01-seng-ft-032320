@@ -1,0 +1,17 @@
+<% if Helpers.is_logged_in?(session)%>
+
+<h1>Edit Tweet</h1>
+
+<p>Content: <%=@tweet.content%></p>
+
+<form method="POST" action="/tweets/<%= @tweet.id %>">
+ <input id="hidden" type="hidden" name="_method" value="patch">
+  <input type="text" name="content">
+  <input type="submit" value="submit">
+</form>
+
+<% else %>
+
+<p>Please log in to view to this message</p>
+
+<% end %>
