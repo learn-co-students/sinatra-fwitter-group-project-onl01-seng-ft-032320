@@ -1,0 +1,8 @@
+<h1>Hi <%=@user.username%>!</h1>
+<h4>Tweets:</h4>
+<ul>
+  <%@user.tweets.each do |t|%>
+  <li><%=t.content%></li>
+  <%end%>
+</ul>
+<p><a href="/users/<%=@user.id%>/edit">Edit Tweet</a></p>
