@@ -62,6 +62,12 @@ class UsersController < ApplicationController
           redirect "/"
         end 
         
+      end
+      
+      get "/users/:slug" do
+        slug = params[:slug]
+        @user = User.find_by(slug)
+        erb :"/users/show"
       end 
 
       helpers do
